@@ -9,21 +9,12 @@ export interface Component {
 }
 
 export function getRegistryItems(): Component[] {
-  // Exclude style items and limit to a single item per section/type
+  // Exclude style items but keep all components of each type
   const components = (registry.items as Component[]).filter(
     (item) => item.type !== "registry:style",
   );
 
-  const seenTypes = new Set<string>();
-  const limited: Component[] = [];
-
-  for (const item of components) {
-    if (seenTypes.has(item.type)) continue;
-    seenTypes.add(item.type);
-    limited.push(item);
-  }
-
-  return limited;
+  return components;
 }
 
 export function getRegistryItem(name: string): Component {

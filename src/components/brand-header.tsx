@@ -1,47 +1,22 @@
 "use client";
 
-import { HelpCircle, Menu, Search, X } from "lucide-react";
+import { HelpCircle, Search } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { useSidebar } from "@/components/ui/sidebar";
 
 import { Logo } from "./logo";
 
 export function BrandHeader() {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
-  const { state, toggleSidebar } = useSidebar();
-  const isCollapsed = state === "collapsed";
 
   return (
     <header className="fixed z-50 w-full border-border border-b bg-background">
       <div className="flex h-16 items-center justify-between px-2">
         <div className="flex items-center space-x-4">
-          <Button
-            variant="ghost"
-            size="icon"
-            className="hidden size-8 md:flex"
-            onClick={toggleSidebar}
-          >
-            {isCollapsed ? (
-              <Menu className="size-4" />
-            ) : (
-              <X className="size-4" />
-            )}
-          </Button>
-
-          <Button
-            variant="ghost"
-            size="icon"
-            className="size-8 md:hidden"
-            onClick={toggleSidebar}
-          >
-            <Menu className="size-4" />
-          </Button>
-
           <Link href="/" className="flex items-center">
             <Logo />
           </Link>

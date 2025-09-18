@@ -143,28 +143,6 @@
       ]
     },
     {
-      "name": "store",
-      "type": "registry:block",
-      "title": "Store",
-      "description": "A store application with your brand themed components",
-      "registryDependencies": [
-        "@registry-starter/theme",
-        "@registry-starter/product-grid"
-      ],
-      "files": [
-        {
-          "path": "src/layouts/minimal-layout.tsx",
-          "type": "registry:file",
-          "target": "app/layout.tsx"
-        },
-        {
-          "path": "src/app/demo/[name]/blocks/store-page.tsx",
-          "type": "registry:page",
-          "target": "app/page.tsx"
-        }
-      ]
-    },
-    {
       "name": "brand-header",
       "type": "registry:component",
       "title": "Brand Header",
@@ -185,63 +163,6 @@
         },
         {
           "path": "src/layouts/shell-layout.tsx",
-          "type": "registry:file",
-          "target": "app/layout.tsx"
-        },
-        {
-          "path": "src/app/demo/[name]/blocks/blank-page.tsx",
-          "type": "registry:page",
-          "target": "app/page.tsx"
-        }
-      ]
-    },
-    {
-      "name": "brand-sidebar",
-      "type": "registry:component",
-      "title": "Brand Sidebar",
-      "description": "A styled, simple, reusable sidebar",
-      "registryDependencies": [
-        "badge",
-        "button",
-        "sidebar",
-        "@registry-starter/theme",
-        "@registry-starter/sonner"
-      ],
-      "files": [
-        {
-          "path": "src/components/brand-sidebar.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "src/layouts/shell-layout.tsx",
-          "type": "registry:file",
-          "target": "app/layout.tsx"
-        },
-        {
-          "path": "src/app/demo/[name]/blocks/blank-page.tsx",
-          "type": "registry:page",
-          "target": "app/page.tsx"
-        }
-      ]
-    },
-    {
-      "name": "login",
-      "type": "registry:component",
-      "title": "Login",
-      "description": "Username & password login section with customer quote.",
-      "registryDependencies": [
-        "badge",
-        "button",
-        "@registry-starter/theme",
-        "@registry-starter/logo"
-      ],
-      "files": [
-        {
-          "path": "src/components/login.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "src/layouts/minimal-layout.tsx",
           "type": "registry:file",
           "target": "app/layout.tsx"
         },
@@ -276,96 +197,23 @@
       ]
     },
     {
-      "name": "hero",
+      "name": "footer",
       "type": "registry:component",
-      "title": "Hero",
-      "description": "Attention-grabbing section for the top of your landing pages.",
-      "registryDependencies": ["badge", "button", "@registry-starter/theme"],
-      "files": [
-        {
-          "path": "src/components/hero.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "src/layouts/minimal-layout.tsx",
-          "type": "registry:file",
-          "target": "app/layout.tsx"
-        },
-        {
-          "path": "src/app/demo/[name]/blocks/blank-page.tsx",
-          "type": "registry:page",
-          "target": "app/page.tsx"
-        }
-      ]
-    },
-    {
-      "name": "promo",
-      "type": "registry:component",
-      "title": "Promo",
-      "description": "Attention-grabbing section to display the current promotional deal.",
-      "registryDependencies": ["button", "@registry-starter/theme"],
-      "files": [
-        {
-          "path": "src/components/promo.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "src/layouts/minimal-layout.tsx",
-          "type": "registry:file",
-          "target": "app/layout.tsx"
-        },
-        {
-          "path": "src/app/demo/[name]/blocks/blank-page.tsx",
-          "type": "registry:page",
-          "target": "app/page.tsx"
-        }
-      ]
-    },
-    {
-      "name": "product-grid",
-      "type": "registry:component",
-      "title": "Product Grid",
-      "description": "Product grid displaying all products with API to fetch data",
+      "title": "Footer",
+      "description": "A minimal footer component with branding and links",
       "registryDependencies": ["@registry-starter/theme"],
       "files": [
         {
-          "path": "src/components/product-grid.tsx",
+          "path": "src/components/footer.tsx",
           "type": "registry:component"
         },
         {
-          "path": "src/lib/products.ts",
-          "type": "registry:lib"
+          "path": "src/layouts/minimal-layout.tsx",
+          "type": "registry:file",
+          "target": "app/layout.tsx"
         },
         {
-          "path": "src/layouts/minimal-layout.tsx",
-          "type": "registry:file",
-          "target": "app/layout.tsx"
-        }
-      ]
-    },
-    {
-      "name": "accordion",
-      "type": "registry:ui",
-      "title": "Accordion",
-      "description": "A vertically stacked set of interactive headings that each reveal a section of content.",
-      "registryDependencies": ["accordion", "@registry-starter/theme"],
-      "files": [
-        {
-          "path": "src/layouts/minimal-layout.tsx",
-          "type": "registry:file",
-          "target": "app/layout.tsx"
-        }
-      ]
-    },
-    {
-      "name": "alert",
-      "type": "registry:ui",
-      "title": "Alert",
-      "description": "Displays a callout for user attention.",
-      "registryDependencies": ["alert", "@registry-starter/theme"],
-      "files": [
-        {
-          "path": "src/layouts/minimal-layout.tsx",
+          "path": "src/layouts/shell-layout.tsx",
           "type": "registry:file",
           "target": "app/layout.tsx"
         }
@@ -377,34 +225,6 @@
       "title": "Avatar",
       "description": "An image element with a fallback for representing the user.",
       "registryDependencies": ["avatar", "@registry-starter/theme"],
-      "files": [
-        {
-          "path": "src/layouts/minimal-layout.tsx",
-          "type": "registry:file",
-          "target": "app/layout.tsx"
-        }
-      ]
-    },
-    {
-      "name": "badge",
-      "type": "registry:ui",
-      "title": "Badge",
-      "description": "Displays a small count or status indicator.",
-      "registryDependencies": ["badge", "@registry-starter/theme"],
-      "files": [
-        {
-          "path": "src/layouts/minimal-layout.tsx",
-          "type": "registry:file",
-          "target": "app/layout.tsx"
-        }
-      ]
-    },
-    {
-      "name": "breadcrumb",
-      "type": "registry:ui",
-      "title": "Breadcrumb",
-      "description": "Displays the path to the current resource using a hierarchy of links.",
-      "registryDependencies": ["breadcrumb", "@registry-starter/theme"],
       "files": [
         {
           "path": "src/layouts/minimal-layout.tsx",
@@ -428,20 +248,6 @@
       ]
     },
     {
-      "name": "calendar",
-      "type": "registry:ui",
-      "title": "Calendar",
-      "description": "A date field component that allows users to enter and edit date.",
-      "registryDependencies": ["calendar", "@registry-starter/theme"],
-      "files": [
-        {
-          "path": "src/layouts/minimal-layout.tsx",
-          "type": "registry:file",
-          "target": "app/layout.tsx"
-        }
-      ]
-    },
-    {
       "name": "card",
       "type": "registry:ui",
       "title": "Card",
@@ -456,165 +262,11 @@
       ]
     },
     {
-      "name": "chart",
-      "type": "registry:ui",
-      "title": "Chart",
-      "description": "Beautiful charts. Built using Recharts. Copy and paste into your apps.",
-      "registryDependencies": ["chart", "@registry-starter/theme"],
-      "files": [
-        {
-          "path": "src/layouts/minimal-layout.tsx",
-          "type": "registry:file",
-          "target": "app/layout.tsx"
-        }
-      ]
-    },
-    {
-      "name": "checkbox",
-      "type": "registry:ui",
-      "title": "Checkbox",
-      "description": "Allows users to select multiple items from a list of options.",
-      "registryDependencies": ["checkbox", "@registry-starter/theme"],
-      "files": [
-        {
-          "path": "src/layouts/minimal-layout.tsx",
-          "type": "registry:file",
-          "target": "app/layout.tsx"
-        }
-      ]
-    },
-    {
-      "name": "data-table",
-      "type": "registry:ui",
-      "title": "Data Table",
-      "description": "Powerful table and datagrids built using TanStack Table.",
-      "registryDependencies": ["data-table", "@registry-starter/theme"],
-      "files": [
-        {
-          "path": "src/layouts/minimal-layout.tsx",
-          "type": "registry:file",
-          "target": "app/layout.tsx"
-        }
-      ]
-    },
-    {
-      "name": "date-picker",
-      "type": "registry:ui",
-      "title": "Date Picker",
-      "description": "Displays the path to the current resource using a hierarchy of links.",
-      "registryDependencies": ["date-picker", "@registry-starter/theme"],
-      "files": [
-        {
-          "path": "src/layouts/minimal-layout.tsx",
-          "type": "registry:file",
-          "target": "app/layout.tsx"
-        }
-      ]
-    },
-    {
-      "name": "dialog",
-      "type": "registry:ui",
-      "title": "Dialog",
-      "description": "A modal dialog that interrupts the user with important content.",
-      "registryDependencies": ["dialog", "@registry-starter/theme"],
-      "files": [
-        {
-          "path": "src/layouts/minimal-layout.tsx",
-          "type": "registry:file",
-          "target": "app/layout.tsx"
-        }
-      ]
-    },
-    {
-      "name": "dropdown-menu",
-      "type": "registry:ui",
-      "title": "Dropdown",
-      "description": "Displays a menu to the user triggered by a button.",
-      "registryDependencies": ["dropdown-menu", "@registry-starter/theme"],
-      "files": [
-        {
-          "path": "src/layouts/minimal-layout.tsx",
-          "type": "registry:file",
-          "target": "app/layout.tsx"
-        }
-      ]
-    },
-    {
       "name": "input",
       "type": "registry:ui",
       "title": "Input",
       "description": "Displays a form input field or a component that looks like an input field.",
       "registryDependencies": ["input", "@registry-starter/theme"],
-      "files": [
-        {
-          "path": "src/layouts/minimal-layout.tsx",
-          "type": "registry:file",
-          "target": "app/layout.tsx"
-        }
-      ]
-    },
-    {
-      "name": "menu-bar",
-      "type": "registry:ui",
-      "title": "Menu Bar",
-      "description": "A visually persistent menu common in desktop applications that provides quick access to a consistent set of commands.",
-      "registryDependencies": ["menu-bar", "@registry-starter/theme"],
-      "files": [
-        {
-          "path": "src/layouts/minimal-layout.tsx",
-          "type": "registry:file",
-          "target": "app/layout.tsx"
-        }
-      ]
-    },
-    {
-      "name": "select",
-      "type": "registry:ui",
-      "title": "Select",
-      "description": "Displays a list of options for the user to pick from—triggered by a button.",
-      "registryDependencies": ["select", "@registry-starter/theme"],
-      "files": [
-        {
-          "path": "src/layouts/minimal-layout.tsx",
-          "type": "registry:file",
-          "target": "app/layout.tsx"
-        }
-      ]
-    },
-    {
-      "name": "separator",
-      "type": "registry:ui",
-      "title": "Separator",
-      "description": "Visually or semantically separates content.",
-      "registryDependencies": ["separator", "@registry-starter/theme"],
-      "files": [
-        {
-          "path": "src/layouts/minimal-layout.tsx",
-          "type": "registry:file",
-          "target": "app/layout.tsx"
-        }
-      ]
-    },
-    {
-      "name": "skeleton",
-      "type": "registry:ui",
-      "title": "Skeleton",
-      "description": "Use to show a placeholder while content is loading.",
-      "registryDependencies": ["skeleton", "@registry-starter/theme"],
-      "files": [
-        {
-          "path": "src/layouts/minimal-layout.tsx",
-          "type": "registry:file",
-          "target": "app/layout.tsx"
-        }
-      ]
-    },
-    {
-      "name": "slider",
-      "type": "registry:ui",
-      "title": "Slider",
-      "description": "An input where the user selects a value from within a given range.",
-      "registryDependencies": ["slider", "@registry-starter/theme"],
       "files": [
         {
           "path": "src/layouts/minimal-layout.tsx",
@@ -643,53 +295,11 @@
       ]
     },
     {
-      "name": "switch",
-      "type": "registry:ui",
-      "title": "Switch",
-      "description": "A control that allows the user to toggle between checked and not checked.",
-      "registryDependencies": ["switch", "@registry-starter/theme"],
-      "files": [
-        {
-          "path": "src/layouts/minimal-layout.tsx",
-          "type": "registry:file",
-          "target": "app/layout.tsx"
-        }
-      ]
-    },
-    {
-      "name": "table",
-      "type": "registry:ui",
-      "title": "Table",
-      "description": "A responsive table component.",
-      "registryDependencies": ["table", "@registry-starter/theme"],
-      "files": [
-        {
-          "path": "src/layouts/minimal-layout.tsx",
-          "type": "registry:file",
-          "target": "app/layout.tsx"
-        }
-      ]
-    },
-    {
       "name": "tabs",
       "type": "registry:ui",
       "title": "Tabs",
       "description": "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
       "registryDependencies": ["tabs", "@registry-starter/theme"],
-      "files": [
-        {
-          "path": "src/layouts/minimal-layout.tsx",
-          "type": "registry:file",
-          "target": "app/layout.tsx"
-        }
-      ]
-    },
-    {
-      "name": "toggle-group",
-      "type": "registry:ui",
-      "title": "Toggle Group",
-      "description": "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
-      "registryDependencies": ["toggle-group", "@registry-starter/theme"],
       "files": [
         {
           "path": "src/layouts/minimal-layout.tsx",
