@@ -33,11 +33,11 @@ Objective: Reduce to basic primitives, essential components, and 4 blocks: heade
 
 ### 6) Public registry artifacts
 - [ ] Prune `public/r/*.json` to entries that match the kept registry items
-- [ ] Update `public/r/registry.json` if needed to reflect the reduced set
+- [x] Update `public/r/registry.json` to reflect one item per section (theme, 1 block, 1 component, 1 UI)
 
 ### 7) Code references and imports
 - [ ] Search and remove dead imports/usages of deleted components/primitives
-- [ ] Verify `src/lib/registry.ts` needs no changes beyond the reduced dataset
+- [x] Verify `src/lib/registry.ts` — updated to limit output to one item per section without deleting source entries
 
 ### 8) Build and run
 - [ ] Run `npm run dev` (or `pnpm dev`) and confirm `registry:build` materializes only the minimal set
