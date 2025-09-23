@@ -1,78 +1,75 @@
 "use client";
 
-import { HelpCircle, Search } from "lucide-react";
 import Link from "next/link";
-import { useState } from "react";
+import { Globe, ChevronDown, Search, Accessibility } from "lucide-react";
 
-import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
 import { Logo } from "./logo";
 
 export function BrandHeader() {
-  const [isSearchOpen, setIsSearchOpen] = useState(false);
-
   return (
-    <header className="fixed z-50 w-full border-border border-b bg-background">
-      <div className="flex h-16 items-center justify-between px-2">
-        <div className="flex items-center space-x-4">
-          <Link href="/" className="flex items-center">
+    <header className="w-full border-b border-[var(--border)] bg-[var(--foreground)]">
+      {/* Top bar */}
+      <div className="flex h-[68px] items-center justify-between px-5">
+        <div className="flex items-center gap-10">
+          <Link href="/" aria-label="Home" className="flex items-center">
             <Logo />
           </Link>
-        </div>
 
-        <div className="hidden items-center space-x-1 md:flex">
-          {isSearchOpen ? (
-            <div className="relative">
+          {/* Search */}
+          <div className="hidden md:flex h-10 w-[600px] items-center justify-between rounded-lg px-3" style={{ backgroundColor: "rgba(255,255,255,0.2)" }}>
+            <div className="flex items-center gap-1.5">
+              <Search className="size-5 text-[var(--accent-foreground)]/80" />
               <Input
                 type="text"
-                placeholder="Search"
-                className="h-9 w-64 pl-9"
-                autoFocus
-                onBlur={() => setIsSearchOpen(false)}
+                placeholder="What are you looking for?"
+                className="h-8 w-[520px] border-0 bg-transparent p-0 text-[16px] font-medium text-[#b7b4b5] placeholder:text-[#b7b4b5] focus-visible:ring-0"
               />
-              <Search className="absolute top-2.5 left-3 size-4 text-foreground" />
             </div>
-          ) : (
-            <Button
-              variant="ghost"
-              size="sm"
-              className="text-foreground"
-              onClick={() => setIsSearchOpen(true)}
-            >
-              <Search className="mr-2 size-4" />
-              Search
-            </Button>
-          )}
-
-          <Button variant="ghost" size="sm" className="text-foreground">
-            <HelpCircle className="mr-2 size-4" />
-            Support
-          </Button>
-
-          <Button variant="ghost" size="sm" className="text-foreground">
-            Upgrade Trial
-          </Button>
-
-          <Avatar className="size-8">
-            <AvatarFallback className="bg-primary text-primary-foreground">
-              <span className="text-xs">ME</span>
-            </AvatarFallback>
-          </Avatar>
+          </div>
         </div>
 
-        <div className="flex gap-2 md:hidden">
-          <Button variant="ghost" size="sm" className="text-foreground">
-            <Search className="h-5 w-5" />
+        <div className="flex items-center gap-4">
+          <Accessibility className="hidden md:block size-6 text-white" />
+          <div className="hidden md:flex items-center gap-2 text-white">
+            <Globe className="size-6" />
+            <span className="text-[16px] font-semibold">US | EN</span>
+          </div>
+
+          <Button
+            className="h-9 rounded-none bg-[var(--primary)] px-2 text-[var(--primary-foreground)]"
+            variant="default"
+            size="sm"
+          >
+            LOG IN
           </Button>
-          <Avatar className="size-8">
-            <AvatarFallback className="bg-primary text-primary-foreground">
-              <span className="text-xs">ME</span>
-            </AvatarFallback>
-          </Avatar>
         </div>
       </div>
+
+      {/* Main nav row */}
+      <div className="flex h-12 items-center justify-between px-5 text-white">
+        <nav className="flex items-center gap-6 text-sm">
+          <NavItem>Products</NavItem>
+          <NavItem>Jobsite Solutions</NavItem>
+          <NavItem>Support & Training</NavItem>
+        </nav>
+
+        <nav className="hidden md:flex items-center gap-6 text-sm">
+          <NavItem chevron={false}>Product Registration</NavItem>
+          <NavItem>Find A Location</NavItem>
+        </nav>
+      </div>
     </header>
+  );
+}
+
+function NavItem({ children, chevron = true }: { children: React.ReactNode; chevron?: boolean }) {
+  return (
+    <div className="flex items-center gap-1 py-2">
+      <span className="text-[14px] font-medium leading-[17px]">{children}</span>
+      {chevron && <ChevronDown className="size-4" />}
+    </div>
   );
 }
