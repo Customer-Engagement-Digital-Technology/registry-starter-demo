@@ -1,15 +1,6 @@
 "use client";
 
-import {
-  Blocks,
-  ChevronDown,
-  Component,
-  Home,
-  Menu,
-  Search,
-  ToyBrick,
-  X,
-} from "lucide-react";
+import { Blocks, ChevronDown, Menu, Search, X } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -131,7 +122,6 @@ export function RegistrySidebar() {
               <CollapsibleTrigger className="w-full">
                 <SidebarGroupLabel className="flex cursor-pointer items-center justify-between">
                   <div className="flex min-w-0 items-center">
-                    <Home className="size-4 flex-shrink-0" />
                     <span className="ml-2 opacity-100 transition-all duration-200">
                       Getting Started
                     </span>
@@ -207,7 +197,6 @@ export function RegistrySidebar() {
               <CollapsibleTrigger className="w-full">
                 <SidebarGroupLabel className="flex cursor-pointer items-center justify-between">
                   <div className="flex min-w-0 items-center">
-                    <Component className="size-4 flex-shrink-0" />
                     <span className="ml-2 transition-all duration-200">
                       Components
                     </span>
@@ -245,7 +234,6 @@ export function RegistrySidebar() {
               <CollapsibleTrigger className="w-full">
                 <SidebarGroupLabel className="flex cursor-pointer items-center justify-between">
                   <div className="flex min-w-0 items-center">
-                    <ToyBrick className="size-4 flex-shrink-0" />
                     <span className="ml-2 transition-all duration-200">
                       UI Primitives
                     </span>

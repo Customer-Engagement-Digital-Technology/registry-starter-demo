@@ -95,30 +95,6 @@
       ]
     },
     {
-      "name": "blank",
-      "type": "registry:block",
-      "title": "Blank",
-      "description": "A blank application with all brand components and code",
-      "registryDependencies": [
-        "@registry-starter/theme",
-        "@registry-starter/brand-header",
-        "@registry-starter/brand-sidebar",
-        "@registry-starter/product-grid"
-      ],
-      "files": [
-        {
-          "path": "src/layouts/minimal-layout.tsx",
-          "type": "registry:file",
-          "target": "app/layout.tsx"
-        },
-        {
-          "path": "src/app/demo/[name]/blocks/blank-page.tsx",
-          "type": "registry:page",
-          "target": "app/page.tsx"
-        }
-      ]
-    },
-    {
       "name": "dashboard",
       "type": "registry:block",
       "title": "Dashboard",
@@ -165,11 +141,6 @@
           "path": "src/layouts/shell-layout.tsx",
           "type": "registry:file",
           "target": "app/layout.tsx"
-        },
-        {
-          "path": "src/app/demo/[name]/blocks/blank-page.tsx",
-          "type": "registry:page",
-          "target": "app/page.tsx"
         }
       ]
     },
@@ -188,11 +159,6 @@
           "path": "src/layouts/minimal-layout.tsx",
           "type": "registry:file",
           "target": "app/layout.tsx"
-        },
-        {
-          "path": "src/app/demo/[name]/blocks/blank-page.tsx",
-          "type": "registry:page",
-          "target": "app/page.tsx"
         }
       ]
     },

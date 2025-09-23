@@ -1,4 +1,4 @@
-import { ArrowRight, Blocks, Component, ToyBrick } from "lucide-react";
+import { ArrowRight, Blocks } from "lucide-react";
 import Link from "next/link";
 
 import { MCPTabs } from "@/components/registry/mcp-tabs";
@@ -68,9 +68,6 @@ export default function Home() {
           <CardHeader className="space-y-1">
             <div className="flex items-center justify-between">
               <CardTitle>UI Primitives</CardTitle>
-              <div className="rounded-md bg-foreground p-1">
-                <ToyBrick className="size-5 text-primary-foreground" />
-              </div>
             </div>
             <CardDescription>
               Reusable UI primitives to build your components
@@ -101,9 +98,6 @@ export default function Home() {
           <CardHeader className="space-y-1">
             <div className="flex items-center justify-between">
               <CardTitle>Components</CardTitle>
-              <div className="rounded-md bg-foreground p-1">
-                <Component className="size-5 text-primary-foreground" />
-              </div>
             </div>
             <CardDescription>
               Compound components using common patterns
