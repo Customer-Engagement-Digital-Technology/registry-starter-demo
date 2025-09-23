@@ -2,6 +2,7 @@ import React, { type ReactNode } from "react";
 
 import { BrandHeader } from "@/components/brand-header";
 import { Toaster } from "@/components/ui/sonner";
+import { Footer } from "@/components/footer";
 
 export default function ShellLayout({
   children,
@@ -14,6 +15,7 @@ export default function ShellLayout({
       <main className="flex w-full justify-center">
         <div className="container">{children}</div>
       </main>
+			<Footer />
       <Toaster />
     </>
   );
