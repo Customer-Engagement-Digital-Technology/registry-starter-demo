@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono, Montserrat } from "next/font/google";
+import { Geist_Mono, Oswald } from "next/font/google";
 import React, { type ReactNode } from "react";
 
 import { BrandHeader } from "@/components/brand-header";
@@ -7,19 +7,15 @@ import { cn } from "@/lib/utils";
 
 import "@/app/globals.css";
 
-const GeistSans = Geist({
-  subsets: ["latin"],
-  variable: "--font-sans",
-});
-
 const GeistMono = Geist_Mono({
   subsets: ["latin"],
   variable: "--font-mono",
 });
 
-const MontserratSerif = Montserrat({
+const OswaldDisplay = Oswald({
   subsets: ["latin"],
-  variable: "--font-serif",
+  weight: ["400", "700"],
+  variable: "--font-display",
 });
 
 export default function RootLayout({
@@ -31,9 +27,8 @@ export default function RootLayout({
     <html
       lang="en"
       className={cn(
-        GeistSans.variable,
         GeistMono.variable,
-        MontserratSerif.variable,
+        OswaldDisplay.variable,
         "bg-background text-foreground",
       )}
     >

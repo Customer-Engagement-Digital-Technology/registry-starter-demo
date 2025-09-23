@@ -4,7 +4,7 @@ import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import type React from "react";
 
-import { FontBlock } from "@/app/(registry)/tokens/font-block";
+import TypographyBlock from "@/app/(registry)/tokens/typography-block";
 import { Button } from "@/components/ui/button";
 import { ColorBlock } from "./color-block";
 
@@ -25,18 +25,7 @@ export default function TokensPage() {
         </p>
       </div>
 
-      {/* Fonts */}
-      <section className="mb-12">
-        <h2 className="mb-4 font-semibold text-xl">Fonts</h2>
-        <p className="mb-6 text-muted-foreground">
-          The core font families that define the primary typography.
-        </p>
-        <div className="grid grid-cols-1 gap-4">
-          <FontBlock className="font-sans" />
-          <FontBlock className="font-serif" />
-          <FontBlock className="font-mono" />
-        </div>
-      </section>
+      {/* Fonts section removed to avoid duplication; see Typography below */}
 
       {/* Primary Theme */}
       <section className="mb-12">
@@ -123,6 +112,100 @@ export default function TokensPage() {
             name="Destructive Foreground"
             className="bg-destructive-foreground"
           />
+        </div>
+      </section>
+
+      {/* Brand */}
+      <section className="mb-12">
+        <h2 className="mb-4 font-semibold text-xl">Brand</h2>
+        <p className="mb-6 text-muted-foreground">
+          Brand palette pulled from the Figma file.
+        </p>
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
+          <ColorBlock name="DeWalt Yellow" hex="#FEBD17" code="BRAND/Primary/DeWalt Yellow" />
+          <ColorBlock name="DeWalt Black" hex="#000000" code="BRAND/Primary/DeWalt Black" />
+          <ColorBlock name="DeWalt White" hex="#FFFFFF" code="BRAND/Primary/DeWalt White" />
+          <ColorBlock name="Yellow - Light" hex="#FFE455" code="BRAND/Secondary/DeWalt Yellow - Light" />
+          <ColorBlock name="Yellow - Dark" hex="#C68D00" code="BRAND/Secondary/DeWalt Yellow - Dark" />
+          <ColorBlock name="Gray - Light" hex="#F5F5F5" code="BRAND/Secondary/DeWalt Gray - Light" />
+          <ColorBlock name="Gray - Dark" hex="#353535" code="BRAND/Secondary/DeWalt Gray - Dark" />
+        </div>
+      </section>
+
+      {/* Grayscale */}
+      <section className="mb-12">
+        <h2 className="mb-4 font-semibold text-xl">Grayscale</h2>
+        <p className="mb-6 text-muted-foreground">Neutral scale for backgrounds and text.</p>
+        <div className="grid grid-cols-2 gap-4 md:grid-cols-5">
+          <ColorBlock name="0" hex="#FFFFFF" code="GRAYSCALE/0" />
+          <ColorBlock name="10" hex="#F5F5F5" code="GRAYSCALE/10" />
+          <ColorBlock name="20" hex="#EEEEEE" code="GRAYSCALE/20" />
+          <ColorBlock name="30" hex="#C4C4C4" code="GRAYSCALE/30" />
+          <ColorBlock name="40" hex="#A6A6A6" code="GRAYSCALE/40" />
+          <ColorBlock name="50" hex="#888888" code="GRAYSCALE/50" />
+          <ColorBlock name="70" hex="#4D4D4D" code="GRAYSCALE/70" />
+          <ColorBlock name="80" hex="#353535" code="GRAYSCALE/80" />
+          <ColorBlock name="90" hex="#1A1A1A" code="GRAYSCALE/90" />
+        </div>
+      </section>
+
+      {/* Interactive */}
+      <section className="mb-12">
+        <h2 className="mb-4 font-semibold text-xl">Interactive</h2>
+        <p className="mb-6 text-muted-foreground">Actionable colors for links and focus.</p>
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
+          <ColorBlock name="Digital Blue" hex="#275CE2" code="INTERACTIVE/Digital Blue" />
+          <ColorBlock name="Digital Blue - Light" hex="#C3D4FB" code="INTERACTIVE/Digital Blue - Light" />
+          <ColorBlock name="Digital Blue - Dark" hex="#00184D" code="INTERACTIVE/Digital Blue - Dark" />
+        </div>
+      </section>
+
+      {/* Utility */}
+      <section className="mb-12">
+        <h2 className="mb-4 font-semibold text-xl">Utility</h2>
+        <p className="mb-6 text-muted-foreground">Status colors for feedback and states.</p>
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
+          <ColorBlock name="Success" hex="#79AD23" code="UTILITY/Success/Success" />
+          <ColorBlock name="Success - Light" hex="#EEF8DC" code="UTILITY/Success/Success - Light" />
+          <ColorBlock name="Success - Dark" hex="#477D00" code="UTILITY/Success/Success - Dark" />
+          <ColorBlock name="Warning" hex="#E68A01" code="UTILITY/Warning/Warning" />
+          <ColorBlock name="Warning - Light" hex="#FFF6E0" code="UTILITY/Warning/Warning - Light" />
+          <ColorBlock name="Warning - Dark" hex="#AE5C00" code="UTILITY/Warning/Warning - Dark" />
+          <ColorBlock name="Error" hex="#CD4040" code="UTILITY/Error/Error" />
+          <ColorBlock name="Error - Light" hex="#FFE5E3" code="UTILITY/Error/Error - Light" />
+          <ColorBlock name="Error - Dark" hex="#960019" code="UTILITY/Error/Error - Dark" />
+        </div>
+      </section>
+
+      {/* Overlay */}
+      <section className="mb-12">
+        <h2 className="mb-4 font-semibold text-xl">Overlay</h2>
+        <p className="mb-6 text-muted-foreground">Scrims and overlays.</p>
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+          <ColorBlock name="50% Black" hex="#000000" code="OVERLAY/50% Black" />
+          <ColorBlock name="70% Black" hex="#000000" code="OVERLAY/70% Black" />
+        </div>
+      </section>
+
+      {/* Typography (from Figma variables) */}
+      <section className="mb-12">
+        <h2 className="mb-4 font-semibold text-xl">Typography</h2>
+        <p className="mb-6 text-muted-foreground">Preview of typography tokens.</p>
+        <div className="grid grid-cols-1 gap-6">
+          <TypographyBlock name="Header / Display" value={`Font(family: "Oswald", style: Bold, size: 80, weight: 700, lineHeight: 88)`} />
+          <TypographyBlock name="Header / H1" value={`Font(family: "Oswald", style: Bold, size: 56, weight: 700, lineHeight: 64)`} />
+          <TypographyBlock name="Header / H2" value={`Font(family: "Oswald", style: Bold, size: 40, weight: 700, lineHeight: 48)`} />
+          <TypographyBlock name="Header / H3" value={`Font(family: "Oswald", style: Bold, size: 32, weight: 700, lineHeight: 40)`} />
+          <TypographyBlock name="Header / H4" value={`Font(family: "Oswald", style: Bold, size: 24, weight: 700, lineHeight: 32)`} />
+          <TypographyBlock name="Header / H5" value={`Font(family: "Oswald", style: Regular, size: 24, weight: 400, lineHeight: 32)`} />
+          <TypographyBlock name="Header / H6" value={`Font(family: "Oswald", style: Bold, size: 18, weight: 700, lineHeight: 20)`} />
+          <TypographyBlock name="Body / Regular" value={`Font(family: "Helvetica", style: Regular, size: 16, weight: 400, lineHeight: 24)`} />
+          <TypographyBlock name="Body / Large" value={`Font(family: "Helvetica", style: Regular, size: 18, weight: 400, lineHeight: 26)`} />
+          <TypographyBlock name="Body / Xtra Large" value={`Font(family: "Helvetica", style: Regular, size: 24, weight: 400, lineHeight: 28)`} />
+          <TypographyBlock name="Body / Small" value={`Font(family: "Helvetica", style: Regular, size: 14, weight: 400, lineHeight: 22)`} />
+          <TypographyBlock name="Body / Xtra Small" value={`Font(family: "Helvetica", style: Regular, size: 12, weight: 400, lineHeight: 16)`} />
+          <TypographyBlock name="Label / Regular" value={`Font(family: "Helvetica", style: Bold, size: 16, weight: 700, lineHeight: 24)`} />
+          <TypographyBlock name="Label / Small" value={`Font(family: "Helvetica", style: Bold, size: 14, weight: 700, lineHeight: 16)`} />
         </div>
       </section>
 
