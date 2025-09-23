@@ -1,22 +1,23 @@
-export function Logo() {
-  return (
-    <div className="flex items-center gap-2">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 24 24"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        className="size-8"
-        role="graphics-symbol"
-      >
-        <circle className="fill-primary" cx="13.5" cy="6.5" r="2.5" />
-        <circle className="fill-primary" cx="19" cy="13" r="2.5" />
-        <circle className="fill-primary" cx="13.5" cy="19.5" r="2.5" />
-        <circle className="fill-primary" cx="6.5" cy="13" r="2.5" />
-      </svg>
+import { cn } from "@/lib/utils";
 
-      <h1 className="font-bold">Brand Name</h1>
+type BrandColor = "Black" | "Brand Yellow";
+
+interface LogoProps {
+  className?: string;
+  alt?: string;
+  color?: BrandColor;
+}
+
+const imgBrandDewaltColorBrandYellow = "/brands/dewalt.svg";
+
+export function Logo({ className, alt = "DEWALT", color = "Brand Yellow" }: LogoProps) {
+  return (
+    <div className={cn("flex items-center", className)} data-name="Brand=DEWALT" data-node-id="6:745">
+      <img
+        src={imgBrandDewaltColorBrandYellow}
+        alt={alt}
+        className="block h-[32px] w-[132px]"
+      />
     </div>
   );
 }
