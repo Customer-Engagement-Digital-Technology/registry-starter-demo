@@ -100,7 +100,7 @@
       "title": "Dashboard",
       "description": "A dashboard application with your brand themed components",
       "registryDependencies": [
-        "https://registry-starter-demo.vercel.app/tokens", 
+        "https://registry-starter-demo.vercel.app/registry/theme", 
         "https://registry-starter-demo.vercel.app/registry/brand-header", 
         "https://registry-starter-demo.vercel.app/registry/brand-footer"],
       "files": [
@@ -126,7 +126,7 @@
         "input",
         "avatar",
         "sidebar",
-        "https://registry-starter-demo.vercel.app/tokens",
+        "https://registry-starter-demo.vercel.app/registry/theme",
         "https://registry-starter-demo.vercel.app/registry/logo"
       ],
       "files": [
@@ -146,7 +146,7 @@
       "type": "registry:component",
       "title": "Brand Logo",
       "description": "A styled, simple, reusable logo",
-      "registryDependencies": ["https://registry-starter-demo.vercel.app/tokens"],
+      "registryDependencies": ["https://registry-starter-demo.vercel.app/registry/theme"],
       "files": [
         {
           "path": "src/components/logo.tsx",
@@ -164,7 +164,7 @@
       "type": "registry:component",
       "title": "Brand Footer",
       "description": "A minimal footer component with branding and links",
-      "registryDependencies": ["https://registry-starter-demo.vercel.app/tokens"],
+      "registryDependencies": ["https://registry-starter-demo.vercel.app/registry/theme"],
       "files": [
         {
           "path": "src/components/footer.tsx",
@@ -187,7 +187,7 @@
       "type": "registry:ui",
       "title": "Avatar",
       "description": "An image element with a fallback for representing the user.",
-      "registryDependencies": ["https://registry-starter-demo.vercel.app/tokens"],
+      "registryDependencies": ["https://registry-starter-demo.vercel.app/registry/theme"],
       "files": [
         {
           "path": "src/components/ui/avatar.tsx",
@@ -200,7 +200,7 @@
       "type": "registry:ui",
       "title": "Button",
       "description": "Allows users to take actions with a single click or tap.",
-      "registryDependencies": ["https://registry-starter-demo.vercel.app/tokens"],
+      "registryDependencies": ["https://registry-starter-demo.vercel.app/registry/theme"],
       "files": [
         {
           "path": "src/components/ui/button.tsx",
@@ -213,7 +213,7 @@
       "type": "registry:ui",
       "title": "Card",
       "description": "Containers for displaying content and actions about a single subject.",
-      "registryDependencies": ["https://registry-starter-demo.vercel.app/tokens"],
+      "registryDependencies": ["https://registry-starter-demo.vercel.app/registry/theme"],
       "files": [
         {
           "path": "src/components/ui/card.tsx",
@@ -226,7 +226,7 @@
       "type": "registry:ui",
       "title": "Input",
       "description": "Displays a form input field or a component that looks like an input field.",
-      "registryDependencies": ["https://registry-starter-demo.vercel.app/tokens"],
+      "registryDependencies": ["https://registry-starter-demo.vercel.app/registry/theme"],
       "files": [
         {
           "path": "src/components/ui/input.tsx",
@@ -239,7 +239,7 @@
       "type": "registry:ui",
       "title": "Sonner",
       "description": "An opinionated toast component for React.",
-      "registryDependencies": ["https://registry-starter-demo.vercel.app/tokens"],
+      "registryDependencies": ["https://registry-starter-demo.vercel.app/registry/theme"],
       "files": [
         {
           "path": "src/components/ui/sonner.tsx",
@@ -252,7 +252,7 @@
       "type": "registry:ui",
       "title": "Tabs",
       "description": "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
-      "registryDependencies": ["https://registry-starter-demo.vercel.app/tokens"],
+      "registryDependencies": ["https://registry-starter-demo.vercel.app/registry/theme"],
       "files": [
         {
           "path": "src/components/ui/tabs.tsx",
