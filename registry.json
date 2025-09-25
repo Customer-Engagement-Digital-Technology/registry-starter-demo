@@ -100,10 +100,10 @@
       "title": "Dashboard",
       "description": "A dashboard application with your brand themed components",
       "registryDependencies": [
-        "@registry-starter/theme",
-        "@registry-starter/sonner",
-        "@registry-starter/brand-header",
-        "@registry-starter/brand-sidebar"
+        "https://registry-starter-demo.vercel.app/registry/theme",
+        "https://registry-starter-demo.vercel.app/registry/sonner",
+        "https://registry-starter-demo.vercel.app/registry/brand-header",
+        "https://registry-starter-demo.vercel.app/registry/brand-sidebar"
       ],
       "files": [
         {
@@ -128,9 +128,9 @@
         "input",
         "avatar",
         "sidebar",
-        "@registry-starter/theme",
-        "@registry-starter/sonner",
-        "@registry-starter/logo"
+        "https://registry-starter-demo.vercel.app/registry/theme",
+        "https://registry-starter-demo.vercel.app/registry/sonner",
+        "https://registry-starter-demo.vercel.app/registry/logo"
       ],
       "files": [
         {
@@ -149,7 +149,7 @@
       "type": "registry:component",
       "title": "Brand Logo",
       "description": "A styled, simple, reusable logo",
-      "registryDependencies": ["@registry-starter/theme"],
+      "registryDependencies": ["https://registry-starter-demo.vercel.app/registry/theme"],
       "files": [
         {
           "path": "src/components/logo.tsx",
@@ -167,7 +167,7 @@
       "type": "registry:component",
       "title": "Footer",
       "description": "A minimal footer component with branding and links",
-      "registryDependencies": ["@registry-starter/theme"],
+      "registryDependencies": ["https://registry-starter-demo.vercel.app/registry/theme"],
       "files": [
         {
           "path": "src/components/footer.tsx",
@@ -190,7 +190,7 @@
       "type": "registry:ui",
       "title": "Avatar",
       "description": "An image element with a fallback for representing the user.",
-      "registryDependencies": ["avatar", "@registry-starter/theme"],
+      "registryDependencies": ["avatar", "https://registry-starter-demo.vercel.app/registry/theme"],
       "files": [
         {
           "path": "src/layouts/minimal-layout.tsx",
@@ -204,7 +204,7 @@
       "type": "registry:ui",
       "title": "Button",
       "description": "Allows users to take actions with a single click or tap.",
-      "registryDependencies": ["button", "@registry-starter/theme"],
+      "registryDependencies": ["button", "https://registry-starter-demo.vercel.app/registry/theme"],
       "files": [
         {
           "path": "src/layouts/minimal-layout.tsx",
@@ -218,7 +218,7 @@
       "type": "registry:ui",
       "title": "Card",
       "description": "Containers for displaying content and actions about a single subject.",
-      "registryDependencies": ["card", "@registry-starter/theme"],
+      "registryDependencies": ["card", "https://registry-starter-demo.vercel.app/registry/theme"],
       "files": [
         {
           "path": "src/layouts/minimal-layout.tsx",
@@ -232,7 +232,7 @@
       "type": "registry:ui",
       "title": "Input",
       "description": "Displays a form input field or a component that looks like an input field.",
-      "registryDependencies": ["input", "@registry-starter/theme"],
+      "registryDependencies": ["input", "https://registry-starter-demo.vercel.app/registry/theme"],
       "files": [
         {
           "path": "src/layouts/minimal-layout.tsx",
@@ -246,7 +246,7 @@
       "type": "registry:ui",
       "title": "Sonner",
       "description": "An opinionated toast component for React.",
-      "registryDependencies": ["sonner", "@registry-starter/theme"],
+      "registryDependencies": ["sonner", "https://registry-starter-demo.vercel.app/registry/theme"],
       "files": [
         {
           "path": "src/layouts/minimal-layout.tsx",
@@ -265,7 +265,7 @@
       "type": "registry:ui",
       "title": "Tabs",
       "description": "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
-      "registryDependencies": ["tabs", "@registry-starter/theme"],
+      "registryDependencies": ["tabs", "https://registry-starter-demo.vercel.app/registry/theme"],
       "files": [
         {
           "path": "src/layouts/minimal-layout.tsx",
@@ -279,7 +279,7 @@
       "type": "registry:ui",
       "title": "Tooltip",
       "description": "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
-      "registryDependencies": ["tooltip", "@registry-starter/theme"],
+      "registryDependencies": ["tooltip", "https://registry-starter-demo.vercel.app/registry/theme"],
       "files": [
         {
           "path": "src/layouts/minimal-layout.tsx",
