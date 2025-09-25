@@ -124,10 +124,10 @@
       "description": "A styled, simple, reusable header",
       "registryDependencies": [
         "https://registry-starter-demo.vercel.app/r/button.json",
-        "input",
+        "https://registry-starter-demo.vercel.app/r/input.json",
         "https://registry-starter-demo.vercel.app/r/avatar.json",
         "https://registry-starter-demo.vercel.app/r/sidebar.json",
-        "theme",
+        "https://registry-starter-demo.vercel.app/r/theme.json",
         "https://registry-starter-demo.vercel.app/r/logo.json"
       ],
       "files": [
